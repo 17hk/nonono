@@ -34,7 +34,6 @@ async def delete_waufubot_shit(client, message):
         await message.delete()
     elif 'This waifu has been added to your harem.' in message.text:
         await message.reply_to_message.delete()
-        await message.delete()
         await waifumessage.delete()
     
 app.run()
