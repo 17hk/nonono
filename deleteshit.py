@@ -3,10 +3,11 @@ from pyrogram import Client, filters
 
 app = Client("my_session", api_id=os.environ['api_id'], api_hash=os.environ['api_hash'])
 
-guessmessage = None 
+guessmessage = None
+waifumessage = None
 
 @app.on_message(filters.chat('animeryu') & filters.user(1382346231))
-async def deleteshit(client, message):
+async def delete_animebot_shit(client, message):
     if message.photo:
         global guessmessage
         guessmessage = message
@@ -23,4 +24,17 @@ async def deleteshit(client, message):
         await message.delete()
         await guessmessage.delete()
 
+@app.on_message(filters.chat('animeryu') & filters.user(792028928))
+async def delete_waufubot_shit(client, message):
+    if message.photo:
+        global waifumessage
+        waifumessage = message
+    elif message.text == 'rip, that\'s not quite right...':
+        await message.reply_to_message.delete()
+        await message.delete()
+    elif 'This waifu has been added to your harem.' in message.text:
+        await message.reply_to_message.delete()
+        await message.delete()
+        await waifumessage.delete()
+    
 app.run()
