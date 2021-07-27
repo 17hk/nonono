@@ -1,8 +1,6 @@
 import os
-from dotenv import load_dotenv
 from pyrogram import Client, filters
 
-load_dotenv()
 app = Client("my_session", api_id=os.environ['api_id'], api_hash=os.environ['api_hash'])
 
 guessmessage = None 
