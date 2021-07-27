@@ -1,0 +1,367 @@
+SQLite format 3   @                                                                     .O}
+   Ñ ,
+¹
+s
+¶Ñ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       b=‚{triggertrg_peers_last_update_onpeersCREATE TRIGGER trg_peers_last_update_on
+    AFTER UPDATE
+    ON peers
+BEGIN
+    UPDATE peers
+    SET last_update_on = CAST(STRFTIME('%s', 'now') AS INTEGER)
+    WHERE id = NEW.id;
+ENDc9indexidx_peers_phone_numberpeersCREATE INDEX idx_peers_phone_number ON peers (phone_number)V1sindexidx_peers_usernamepeersCREATE INDEX idx_peers_username ON peers (username)D%[indexidx_peers_idpeersCREATE INDEX idx_peers_id ON peers (id)Q{tableversionversionCREATE TABLE version
+(
+    number INTEGER PRIMARY KEY
+)‚„tablepeerspeersCREATE TABLE peers
+(
+    id             INTEGER PRIMARY KEY,
+    access_hash    INTEGER,
+    type           INTEGER NOT NULL,
+    username       TEXT,
+    phone_number   TEXT,
+    last_update_on INTEGER NOT NULL DEFAULT (CAST(STRFTIME('%s', 'now') AS INTEGER))
+)Q‚utablesessionssessionsCREATE TABLE sessions
+(
+    dc_id     INTEGER PRIMARY KEY,
+    test_mode INTEGER,
+    auth_key  BLOB,
+    date      INTEGER NOT NULL,
+    user_id   INTEGER,
+    is_bot    INTEGER
+)
+   í í                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ‚ „>ÚãÝHöØ!œª^¤`!rgÖB¹M?rÀPáØ¸Òü_^ÇÓBE¦ ¿6 9@ŽžCŸKÔF\5Â€¸É-g»Ålô"ÆölïØ–õµÆU§‘bDf9Nª
+ÂÆüÐ‡Ê
+ëéÝš'‹ÓM.Í==6H=Ëhöw¬
+
+Óu´­ì•’URçýçh˜{‹]Kì(†ˆJ¡qò–Ñ]ÆAyÄ9¥ªÖ3Ÿ¥÷Ñ@L7°£€uê1ì”W
+hüÞŽN¬EöªÑç4ª›(—•%9äÌºkƒ÷¥ËÐ4SŽO¿t¢=ßÀpL€ìyÂ±øœDø¢œ4»i`ÿï%iéøÆ   î    
+÷î
+Þ¬yK
+æ
+°
+|
+P
+ß©u>×°Z4
+ã
+¼
+–
+m
+D
+	ð	Æ	Ÿ	|	X	2	åÀšpG#Ú·’f@øÏ rEøÒ¯†[4ñÊ§uMúÕ­[4
+â¾˜oH!ú×¯‚Y1 ä                                    !„þ÷È% ! ôMàš]­/usertamashiito`ÿæL „ôÆÉ*  ÷»€lR³¦
+userashu22111`ÿè`"„ôÃûL # 
+	@É°íruseralifaiman06`ÿêŽ#„òŒå] % Ü[ü·‰‹šuseritssamrat007`ÿêz'„íÿ— - ¥$Î Cónusertarikul_official`ÿì."„æƒáF % ˜9U±™1botnekofied_bot`ÿëÛ„ÞûÜn  Õëè´¬­(userkyinel`ÿæ’!„Ü´¶y ! ªò°`#®useryolaa_chan`ÿë³!„Ûõú] ! çË?GìÀßDuseryouuumysun`ÿì4!„Ù‡æ ! ó€™a+½Susershoyo_kun5`ÿëé#„Ò÷ÿ$ % ÃF½§=rNóuserchadpotatoxd`ÿçñ „È¸  Â²Ûq!Íyøusernot_argha`ÿëE„È’°U  s½ùÐt=X‰userhellols`ÿìB"„Å¾ˆf # »Â²¦Ž¨|userbout_myself`ÿéŸ$„»ÚÉw ' -rÆ?Däðuserrotten_potato`ÿêu!„¸¤„ ! ùƒÕ†c‚=cusertanishk_01`ÿëÇ „­î»  ƒ²Ì¬t†2useradisharks`ÿê'&„ óù- - óÊæÁ~Ä6cbotmentionmirrorbot`ÿêt"„œ†ØO # Fõ½¦v{«¿userokashira_ai`ÿæp„–ÎÞ|  %¾PB ýtusericha2928`ÿêt„”í—}  ƒ½9.(Musererezado`ÿéf)„”žð 1 P+3[sm‹wuseruse_this_to_tag_me`ÿìQ"„£•# # I‡Ó¦¥luserammyforever`ÿêY,„Ï€ %›9¸Ç’]userryukaizen917773942467`ÿëg„‡²ÜP  ¯5`"L±ºusershal_x`ÿé !„††È@ ! Žl{˜òuuserdeeks_04_8`ÿê„…ÿ—M   §èÿ»PU‘user`ÿë4 „…É K  KÆÐFÌˆuserneko_asta`ÿêo!ƒÿÓÿG ! ¹-uûØ;userkaambhari7`ÿëÊ%ƒúŽ 6 + Ñç0xBc×bottelemetr_io_bot`ÿéS#ƒùÎ˜y % <=/—cqusereagleeye2045`ÿì;ƒøÓ@  Aßê ‘‡-›userkody_k`ÿé, ƒôø±#  OwØÍ»úusercatseye_3`ÿéù!ƒíæÊg ! DCH‹7j»³userbarryspace`ÿëE ƒì™ãe  ¤SƒÆ¯Dôãuserllphamale`ÿçò'ƒëùõ - à oŽš usercall_me_senpai69`ÿëø(ƒê–°1 / ²ìŒÄ!òuserdeep_imaginations`ÿè¥)ƒãåÅ 1 Ì|bf¨¼˜userinfinity_forever_0`ÿè#ƒãØ£ % ‚®êìê]i'userokkotsuyuta1`ÿêz ƒÏ¿ÿ  l+//“ausernotthatmf`ÿéáƒÉ›Î"  j>YÀÙÃóLuserxgorn`ÿêt ƒÇâÅA ! ŸZ²Y)žbotmiyukiibot`ÿì &ƒÃ…# + r½¾9dRuseriam_ironman3000`ÿéúƒÁÈ¾,  iG,ž÷>usera_hentai`ÿéßƒ¿Å—e  áërwO4Žusertno_xd`ÿèÙ&ƒ¶¨p + 6èü†í¦öàusereverythingsuckz`ÿêƒœãz   ¬X#µ©]·óuser`ÿëMƒƒôP  7‚BM¤¤ruserthaya03`ÿìO#ƒ†æ€x ' ¦³^‰Ï4botgetmarriedbot`ÿë‰$‚ùÕÎ  ) çN!§Ìîø"botloli_harem_bot`ÿì	 ‚ó›£} ! 4J^ËÄÆ?botnepgearbot`ÿæ?‚òªêe  Íä©ÁÆ…userxelyanaa`ÿåó!‚ã—¯_ ! dVê¬ž›Éuserotakuteger`ÿèÐ ‚ÄœÓO  À^€Rió†usermillivi03`ÿéA ‚Ã¨íb  Mp#MKðusertaijefx34`ÿæ@‚½¼Ø(  #7¼‘¦µäuserzedcrom`ÿëì‚«ùœ  GÆ·õ×Þusercurrui`ÿì4!‚«ƒ¹ ! Ê¾sÔ%Æuserthroughend`ÿéR$‚œ’Þc ) »c^hq`@'botdeezermusicbot`ÿê*#‚‡ô– % åœÏAW©6userananduthampi`ÿé%ñše ) EÁÏ¢¥ŸG…userneko_means_cat`ÿì #ä°h % Á…´‹uZ‹useralvin_junior`ÿêt#Í…†j % v–ÄÚQ¸_Üuserso_save_me_m`ÿëE Á¥¸m ! ÎE™Vç¦qbotwhisperbot`ÿêo"ÍÌ„
+ % £Xt
+®0gbotgrouphelpbot`ÿéR Éñ¤3 ! ‚¹õh“Õnbotaxenia_bot`ÿê'Âòð[ - ~_Ÿ%ch0userfromandtounknown`ÿë>!ÁžØ # ^'ŽÌ­# botchannel_bot`ÿë­ÿÿÿñ·’Ðí !  \·í­ÓÈ»òsupergroup`ÿë¡%ÿÿÿñ·’„Å\ # â¡ûô­	channelryuzokulogs`ÿë­ÿÿÿñ·Ž…Öz !  Î0Š%^Vèsupergroup`ÿæL*ÿÿÿñ·‡‘”8 !' ŽHÕ
+ÁÆÜsupergroupwibuudesunime`ÿëÀ)ÿÿÿñ·†“Î} + ºiXé°channelanimehindimemes`ÿèZ-ÿÿÿñ·‚º‘S !- LÀÔ[9-supergroupotaku_chat_group`ÿêz*ÿÿÿñ·€íãñ !' ‹HåÎŽŽ=supergroupdawnguardchat`ÿè†,ÿÿÿñ·€ëàD !+ Ù½S! ûosupergroupanimechatsgroup`ÿéú3ÿÿÿñ¶þÑð© !9 ôì)7»^supergroupteenagerschattinggroup`ÿìU*ÿÿÿñ¶ûšÙd - ž
+I™ïòchannelanimeecchiwaifus`ÿè"ÿÿÿñ¶ö÷“a  ÛrA”¯“X	channelnekofied`ÿèr*ÿÿÿñ¶öª†ˆ !' Z¯§ý±~supergroupexorcistchats`ÿìJ,ÿÿÿñ¶öŽæ !+ ´1îDzŠ¾supergroupwhythisusername`ÿê$ÿÿÿñ¶ôëÌ£ ! ,Êô%Ì^supergroupbottalk`ÿëÙ-ÿÿÿñ¶ô°»¦ 3 *®»7µchannelanime_bikini_waifus`ÿë¡$ÿÿÿñ¶ðÍš ! ï
+Å¤q„Õsupergroupjustcht`ÿëÇ)ÿÿÿñ¶âÉÒ  !% Ð0WPà supergrouppyrogramchat`ÿé(ÿÿÿñ¶Þ®Ì^ !# þg©¤IWÊðsupergroupotakuzdream`ÿìO%ÿÿÿñ¶ÙÌ†Q ! %,õË•Æ8Ýsupergroupanimeryu`ÿìT'ÿÿÿñ¶ÔÁË !! Ù"‹þ†lsupergroupanteiku613`ÿåóÿÿÿñ¶ÏÓ°“ !  &Ý‚³wsupergroup`ÿìL0ÿÿÿñ¶Ë£¡ !3 3
+!"Ñ+Csupergrouppatheticprogrammers`ÿé>#ÿÿÿñ¶¶•Ýf  {ÓÅ ÓÓchannelautoanime`ÿë$*ÿÿÿñ¶±£çw !' §‘Õ)ôsupergrou   	†”»¾T   ƒöìÎg
+   ü ü                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+   åÔ ðàÐÀ ° €p`P@0  ðàÐÀ°¼ €üth\P\(D8, Ì
+ü
+ðð
+ä
+Ø
+Ì¬
+À4
+´
+¨
+œ”,
+
+„t
+x„
+l
+`
+T
+H
+<
+0
+$
+
+
+ ôèÜähxôÐTÄ¸¬ ”ˆ|ìpdXL@4(Ü°P0øìØàÔÈ|¼°¤l˜$Œ€øth\€dˆPD8, ¤
+ü
+ðL¸
+ä
+Ø
+Ì
+À
+´
+¨
+œ
+
+„
+xÔ
+l
+`
+T
+H
+<
+0
+$
+`
+8
+ 	ô	è	Ü	Ðè	Ä	¸<à@Ä	¬	 	”	ˆ	|X	p	d	X	L	@D	4	(			øìàÔ È¼p°¤˜Œ€th\ŒPD8Ð, üHð˜äØÌÀ´¨œ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Z-kZ-kd:Â²d:Â²@Ù8@Ù8NÞØNÞØs¬h=s¬h=BðîBðîIv²ºIv²ºY ÕY Õ.,i:.,i:dPß,dPß,Tÿ?›Tÿ?›g#µkg#µkOœX…OœX…mršamršaJüû³Jüû³OÈØOÈØ/þl1/þl1l€àôl€àô(¨2(¨2UÏHdUÏHddÈ4sdÈ4soóJ—oóJ—E	ÜƒE	Üƒb'ÑŠb'ÑŠ>;“µ>;“µÿÔ·JÿÔ·JÖóQÖóQÿæÐ:ÿæÐ:0]œ0]œ_C©ª_C©ªh{©ýh{©ýF…«áF…«á’Â’Â=ÿ7[=ÿ7[2‹2‹O”jÈO”jÈn÷Š¶n÷Š¶qsö6qsö6SgCSgCFµ‘Fµ‘ÿã©\ÿã©\"ä¸¹"ä¸¹H·¯óH·¯ó=Õð/=Õð/&²¨&²¨ÿè †´ÿè †´NElNElY.
+”Y.
+”L‘O	L‘O	GIÛ4GIÛ4d &ßd &ßq0w¹q0w¹>Û'g>Û'g^Æþ^ÆþKÚÁÃKÚÁÃ>U>U6¸EÅ6¸EÅsW1sW1s7E§s7E§rÙ2ÛrÙ2Ûr¿P¬r¿P¬r±Ïr±Ïr*¶Ær*¶Æqû’/qû’/q•ø›q•ø›qGc[qGc[q)>Õq)>Õpþ_pþ_p—p—pïbpïbpÁîpÁîov‡8ov‡8o;;‹o;;‹o
+ÉFo
+ÉFnä‰nä‰nÉ1nÉ1nÀæÖnÀæÖnzuënzuëmé‹Omé‹OmÞ¥ymÞ¥ymÎ£smÎ£smÆdmÆdm¶Em¶El–(Ÿl–(ŸlrŠSlrŠSl,"Æl,"Æjójój¾±Áj¾±ÁjªÕjªÕj5éj5éiéøÆiéøÆiÐ	qiÐ	qiPdiPdh
+Fh
+FgöÏÕgöÏÕgàFsgàFsg»ªg»ªg~è°g~è°fÑ”ÈfÑ”ÈfÅ¯fÅ¯eÂU eÂU eµïweµïwe º¡e º¡cQÍ]cQÍ]bŽßTbŽßTb[Ób[Ób”"b”"aJHaJHaËRaËR`p8£`p8£_	!_	!^l':^l':^#j«^#j«^
+H´^
+H´]™d]™d]-(]-(\À_‡\À_‡[6ï[6ï[E[EYì±XYì±XY¿Y¿Y'ðY'ðXÜ@xXÜ@xWSÌÒWSÌÒW%îW%îV©uùV©uùVaªdVaªdV6øV6øV
+FV
+FTÉ¦,TÉ¦,Tt; Tt; SqSÎSqSÎSX_SX_Re-ùRe-ùRdí÷Rdí÷R•]R•]P´)óP´)óOÝä%OÝä%N‘¤ªN‘¤ªNýÌNýÌNC2ÝNC2ÝM¿ËM¿ËLÀðÆLÀðÆKÞînKÞînKyKyK}}]K}}]K!óK!óJ]ÿ¤J]ÿ¤I\I\I˜UI˜UH¯„fH¯„fGv¤÷Gv¤÷G	G	E»‚E»‚Dü­Dü­C¬OC¬OBÓ¯|BÓ¯|B›KýB›KýB‡¸B‡¸BÊ£BÊ£AóÀAóÀ@ì®P@ì®P@Á¤@@Á¤@@¿ËÍ@¿ËÍ@²PK@²PK?ôÿÇ?ôÿÇ?C6?C6?3Œy?3Œy?iÀ?iÀ>ž£>ž£=¹¥g=¹¥g=†qå=†qå=~zŸ=~zŸ=E˜1=E˜1<yb<yb<v‹<v‹9ïÿ9ïÿ9&ç"9&ç"8ø¢Á8ø¢Á8aG£8aG£82,82,7ñKå7ñKå6Êð6Êð3€qú3€qú2 úP2 úP0Ù€x0Ù€x/5g /5g .fÑý.fÑý.Jµe.Jµe,e×ß,e×ß(‡)Ï(‡)Ï(j6â(j6â'¯,('¯,(%~N%~N%`Ü%`Ü#„¯c#„¯c ý ý&‡å&‡åŒèŒè¡Cj¡Cj)\m)\m	³
+	³
+	<R3	<R3\¸[\¸['¬'¬ÿä¨mÿä¨mÿä‚E\ÿä‚E\ÿã‚Özÿã‚ÖzÿáÈ”8ÿáÈ”8ÿá‰Î}ÿá‰Î}ÿàSÿàSÿà6ãñÿà6ãñÿà5àDÿà5àDÿß¨ð©ÿß¨ð©ÿÞÍYdÿÞÍYdÿÝ»“aÿÝ»“aÿÝ•ˆÿÝ•ˆÿÝ‡æÿÝ‡æÿÝ5Ì£ÿÝ5Ì£ÿÝ;¦ÿÝ;¦ÿÜ&šÿÜ&šÿØ¤Ò ÿØ¤Ò ÿ×—L^ÿ×—L^ÿÖfQÿÖfQÿÕ ËÿÕ ËÿÓé°“ÿÓé°“ÿÒÑ¡ÿÒÑ¡ÿÍŠÝfÿÍŠÝfÿÌQçwÿÌQçw   î    îÚsÒúŽÊeÂº²ª¢š’òŠ‚zrjbZR]J:­)
+úæ{Ó¿¢¹~‰oV=+
+í
+Ü
+Ê
+·
+¦
+—
+…
+s
+b
+Q
+>
+&
+
+ïÜÎ´‹r\@K8Ñ&-ðáÊ³™lÏXC4%
+þ
+ñ
+×
+Ã
+¯
+Ÿ
+Š
+y
+g
+W
+B
+0
+
+U
+	é	Û	Ê	·	¦	§	p	Rà	=	)	¼ýìÚÉm¸ž|fT@)õÞË·#¡”‚hVA$¦ùëéÜÊµ¤ycUB0Kò:áÐ–¿­›ƒcL=!•þðÖ¾ª˜†q]D-üêØÉ»        #pyrogrambotÖóQ%anime_meemesÿæÐ:gramson880]œ!lovely2609_C©ª h{©ý F…«á
+combot’Â#deshdeepak2=ÿ7[+on9wordchainbot2‹sourav_o3O”jÈ!smokeroesen÷Š¶ qsö6 SgCmortem000Fµ‘'anime_villageÿã©\-theprogrammercat"ä¸¹adiko0kH·¯ó'maxamuudcumar=Õð/1doragonsureiya_bot&²¨)pythonofftopicÿè †´mitarashNEl Y.
+”!bilakshanpL‘O	#dukhinarutoGIÛ4'dhruvkrpathakd &ß9kiyotakaayanokojiclassq0w¹ >Û'g#am_peerless^Æþ KÚÁÃt4rt4glia>U%lolimnotabot6¸EÅ
+zenoxdo;;‹zedcrom'¯,(!youuumysunK}}]!yolaa_chanKy%yandere_garlr*¶Æxgorn9&ç"xelyanaa.Jµe'wibuudesunimeÿáÈ”8+whythisusernameÿÝ‡æ%whyam_i_herejªÕ'white_reaper1Y¿!whisperbot)\m!viktorbrunnä‰%vaishnavi912SqSÎ-usorpericulosuleov‡81use_this_to_tag_meB‡¸
+tno_xd7ñKåtigeran_5Vaªd!throughend%`Ü5themaisakurajima_botrÙ2Ûthaya032 úP+telemetr_io_bot?C69teenagerschattinggroupÿß¨ð©-tarikul_officialM¿Ë!tanishk_01G	!tamashiitoOÝä%taijefx34(j6âsyafow109Re-ùsxnnyvibe[6ï#soltenebrisj5é%so_save_me_m¡Cj+skittleislonelyq•ø›!shoyo_kun5K!ó#shitmylife1mÆd
+shal_x@ì®P)satan_fireballlrŠS)saberx_herobotfÅ¯#ryuzokulogsÿä‚E\ryukaizenAóÀ'rotten_potatoGv¤÷!ronozoro99[Eritvzm¶Eristarte\À_‡%pyrogramchatÿØ¤Ò 'peri_patheticqû’/3patheticprogrammersÿÒÑ¡#otakuzdreamÿ×—L^!otakuteger,e×ß-otaku_chat_groupÿàS!ot7_girl07o
+ÉFos_r0r¿P¬)oneforallkillusW1%okkotsuyuta1<v‹#okashira_aiC¬O+notyourpogchampV
+Fnotthatmf9ïÿnot_arghaI\!nepgearbot.fÑý'nekolitemightÿÌQçw%nekofied_botLÀðÆnekofiedÿÝ»“a)neko_means_cat&‡åneko_gurlTÉ¦,neko_asta@²PK1narutouzumakirobotW%înao_ayaka]-(modi42069r±Ï!miyukiibot8ø¢Ámillivi03(‡)Ï-mentionmirrorbotDü­%marysoatame2`p8£%lynx_katsuyop—'lovely_senpaiiÐ	q9love_the_way_u_hate_meiPd=love_me_or_hate_me_idgafY'ð)loli_harem_bot/5g llphamale=†qå#lilly_d1441b”"lifesukcsiéøÆ
+kyinelKÞîn1kushinauzumaki_botl,"Æ
+kody_k?iÀ
+kimis9eÂU kenzonew1eµïw!kawai_kekih
+F'karmen_senseimÎ£skamagoouqGc[!kaambhari7?ôÿÇjustchtÿÜ&š'jungkookrobot]™djanamir1V©uù%izumicypherxe º¡%itssamrat007NC2Ý1infinity_forever_0<ybijczepÁîicha2928BÓ¯|+iam_ironman30008aG£hellolsI˜Uhashlranzuë'hanabi_anibotmé‹O%grouphelpbot	³
+'getmarriedbot0Ù€x-fromandtounknown\¸[1foundingtitanrobotgöÏÕ'exorcistchatsÿÝ•ˆ+everythingsuckz6ÊðerezadoB›Kýepangjuls^l':emcee_botaJH%eagleeye2045?3Œy!duke123abcg»ª#doctorrynerWSÌÒdiebishhh^#j«)deezermusicbot#„¯c/deep_imaginations=E˜1!deeks_04_8@Á¤@'dawnguardchatÿà6ãñ1czto_to_ili_kto_toR•]
+currui%~N#channel_bot'¬%chadpotatoxdJ]ÿ¤!ccg_reaperXÜ@xcatseye_3>ž£-call_me_senpai69=~zŸ#bout_myselfH¯„fbottalkÿÝ5Ì£billu_donbŽßT!barryspace=¹¥g!axenia_bot	<R3axel_vrP´)óavijneyamg~è°autoanimeÿÍŠÝf!aura_moon1nÉ1ashu22111N‘¤ª%any_animebotRdí÷!anteiku613ÿÕ Ë)annihilatorrrr_	!animeryuÿÖfQ/animekeparambhaktaËR+animehindimemesÿá‰Î}-animeecchiwaifusÿÞÍYd+animechatsgroupÿà5àD3anime_bikini_waifusÿÝ;¦%ananduthampi ý#ammyforeverBÊ£%alvin_juniorŒè#alifaiman06NýÌ5akenohimejimachatbotTt; adisharksE»‚a_hentai82, s7E§ q)>Õ pþ_ pïb nÀæÖ mÞ¥y l–(Ÿ jó j¾±Á gàFs fÑ”È cQÍ] b[Ó ^
+H´ Yì±X V6ø SX_ @¿ËÍ 3€qú	 ÿä¨m	   
+kody_k?iÀ
+   åˆ öìâØ	PÎÄº°¦œ’ˆ~tj`VLB8.	Ì$	b	ö øð	Œ°ÀèàØ	ZÐÈ	ÖÀ¸°	î¨ ˜	Èˆ€x		lph	œ`
+PXPH@80(  
+ø	æ	”
+H	H
+ð
+0
+è
+à
+Ø
+Ð
+È
+À
+¸˜
+°
+¨
+ 
+˜
+
+ˆ
+€	8
+x	Ä	„
+p
+
+h
+`	Þ
+X
+P¸
+Hø
+@
+8
+0
+@
+(
+
+ 
+ 
+
+ 
+
+ 	¤è	 øðèàØÐ	¼ÈÀ¸Ø	 °¨ ˜ˆ€x
+phˆ`XPH@80(
+8 	t ø	@ðè
+ Ð	(àØÐÈÀà¸°¨ ˜	|ˆ€xph`X	PHð@80( 	¬ 
+ø
+ð	0
+è
+à
+Ø
+Ð
+È
+(
+À	´
+¸
+°
+¨
+ 
+˜
+
+ˆ
+€¨
+l
+X                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Z-k d:Â² @Ù8 NÞØ s¬h= Bðî Iv²º Y Õ .,i: dPß, Tÿ?› g#µk OœX… mrša Jüû³ OÈØ /þl1 l€àô (¨2 UÏHd dÈ4s oóJ— E	Üƒ b'ÑŠ >;“µ	 ÿÔ·J ÖóQ	 ÿæÐ: 0]œ _C©ª h{©ý F…«á ’Â =ÿ7[ 2‹ O”jÈ n÷Š¶ qsö6 SgC Fµ‘	 ÿã©\ "ä¸¹ H·¯ó =Õð/ &²¨	 ÿè †´ NEl Y.
+” L‘O	 GIÛ4 d &ß q0w¹ >Û'g ^Æþ KÚÁÃ >U 6¸EÅ%919928862742iéøÆ%917773942467AóÀ sW1 s7E§ rÙ2Û r¿P¬ r±Ï r*¶Æ qû’/ q•ø› qGc[ q)>Õ pþ_ p— pïb pÁî ov‡8 o;;‹ o
+ÉF nä‰ nÉ1 nÀæÖ nzuë mé‹O mÞ¥y mÎ£s mÆd m¶E l–(Ÿ lrŠS l,"Æ jó j¾±Á jªÕ j5é iÐ	q iPd h
+F göÏÕ gàFs g»ª g~è° fÑ”È fÅ¯ eÂU  eµïw e º¡ cQÍ] bŽßT b[Ó b”" aJH aËR `p8£ _	! ^l': ^#j« ^
+H´ ]™d ]-( \À_‡ [6ï [E Yì±X Y¿ Y'ð XÜ@x WSÌÒ W%î V©uù Vaªd V6ø V
+F TÉ¦, Tt;  SqSÎ SX_ Re-ù Rdí÷ R•] P´)ó OÝä% N‘¤ª NýÌ NC2Ý M¿Ë LÀðÆ KÞîn Ky K}}] K!ó J]ÿ¤ I\ I˜U H¯„f Gv¤÷ G	 E»‚ Dü­ C¬O BÓ¯| B›Ký B‡¸ BÊ£ @ì®P @Á¤@ @¿ËÍ @²PK ?ôÿÇ ?C6 ?3Œy ?iÀ >ž£ =¹¥g =†qå =~zŸ =E˜1 <yb <v‹ 9ïÿ 9&ç" 8ø¢Á 8aG£ 82, 7ñKå 6Êð 3€qú 2 úP 0Ù€x /5g  .fÑý .Jµe ,e×ß (‡)Ï (j6â '¯,( %~N %`Ü #„¯c  ý &‡å Œè ¡Cj )\m 	³
+ 	<R3 \¸[ '¬	 ÿä¨m	 ÿä‚E\	 ÿã‚Öz	 ÿáÈ”8	 ÿá‰Î}	 ÿàS	 ÿà6ãñ	 ÿà5àD	 ÿß¨ð©	 ÿÞÍYd	 ÿÝ»“a	 ÿÝ•ˆ	 ÿÝ‡æ	 ÿÝ5Ì£	 ÿÝ;¦	 ÿÜ&š	 ÿØ¤Ò 	 ÿ×—L^	 ÿÖfQ	 ÿÕ Ë	 ÿÓé°“	 ÿÒÑ¡	 ÿÍŠÝf	 ÿÌQçw
+r Q ÍÌŸe>î
+Þ¬yK
+æ
+°
+|
+P
+ß©u>× Í°ZQ§4
+ã
+¼.(
+–
+m
+D*
+	ð þ	Æ	Ÿ	|y	X	2	 åMÀšpsG#§GÚ·’f@øÏ rEøOÜ!ÇÒ­[˜4Ü
+â+¾r             'ÿÿÿñ·Œ¥©\ ' ìÏ¹\>P‡channelanime_village`ÿíg'‚—’ñ9 - BK(³¸husertheprogrammercat`ÿî r äË…  ¸ßîvÓS•botcombot`ÿíø$ƒî×à/ ' qì˜Âr%xusermaxamuudcumar`ÿí™(‚°–å( 1 É¦–?žõmbotdoragonsureiya_bot`ÿí™+ÿÿÿñ·¢Á†´ !) zÁ9¨Öôsupergrouppythonofftopic`ÿí™"ƒïüî[ # Í³'Þë userdeshdeepak2`ÿîªƒöìÎg   Z1oÛˆuser`ÿî ƒðØ–U  Ô?üiõ½Ûúusert4rt4glia`ÿì…"ƒµá‹E % Ë‡Z”’²„‚botlolimnotabot`ÿìs     ”¸  Â²Ûq!Íyøusernot_argha`ÿì¼  :ë  j¿ƒd,usermortem000`ÿí„È’°U  s½ùÐt=X‰userhellols`ÿìB  ðˆf # »Â²¦Ž¨|userbout_myself`ÿéŸ$„»ÚÉw ' -rÆ?Däðuserrotten_potato`ÿêu  ž„ ! ùƒÕ†c‚=cusertanishk_01`ÿëÇ  w»  ƒ²Ì¬t†2useradisharks`ÿê'&„ óù- - óÊæÁ~Ä6cbotmentionmirrorbot`ÿêt"„œ†ØO # Fõ½¦v{«¿userokashira_ai`ÿæp„–ÎÞ|  %¾PB ýtusericha2928`ÿìÎ„”í—}  ’‹án  Qd3¿«aÐ×botnnbbot`ÿï²äU  òÞ/JJ8Råuserbruck_08`ÿï ‚ñ±Ò:  ¾ù7[…*/usercaliph786`ÿï'‚ÿùØ1 - *C9„L‚¸1usercallmesenpaibish`ÿîÄ!‚Å ä ! Ýr‰òâº
+äuserutahjohnny`ÿîŽ!ƒñî§5 ! äÀ`>Ý³¿usermoviejoker`ÿî@2ÿÿÿñ¶Òƒ·J !7 P¨Ô±¿M¥Osupergroupchurchofrukasarashina`ÿî7!æÛæQ # 5þwµÉÂ:bbotpyrogrambot`ÿî«&ÿÿÿñ·› º % ‹€‚âØÑÿchannelanime_meemes`ÿî7 ƒ€»  Áq÷ò¯ÿusergramson88`ÿîZ%ƒÚ– + ùòÿ†Çpboton9wordchainbot`ÿî» ƒôø±#  OwØÍ»úusercatseye_3`ÿéù!ƒíæÊg ! DCH‹7j»³userbarryspace`ÿëE ƒì™ãe  ¤SƒÆ¯Dôãuserllphamale`ÿçò'ƒëùõ - à oŽš usercall_me_senpai69`ÿëø(ƒê–°1 / ²ìŒÄ!òuserdeep_imaginations`ÿè¥)ƒãåÅ 1 Ì|bf¨¼˜userinfinity_forever_0`ÿìw#ƒãØ£ % ‚®êìê]i'userokkotsuyuta1`ÿêz ƒÏ¿ÿ  l+//“ausernotthatmf`ÿéáƒÉ›Î"  j>YÀÙÃóLuserxgorn`ÿêt ƒÇâÅA ! ŸZ²Y)žbotmiyukiibot`ÿíÇ&ƒÃ…# + r½¾9dRuseriam_ironman3000`ÿéúƒÁÈ¾,  iG,ž÷>usera_hentai`ÿéßƒ¿Å—e  áërwO4Žusertno_xd`ÿèÙ&ƒ¶¨p + 6èü†í¦öàusereverythingsuckz`ÿêƒœãz   ¬X#µ©]·óuser`ÿëMƒƒôP  7‚BM¤¤ruserthaya03`ÿï#ƒ†æ€x ' ¦³^‰Ï4botgetmarriedbot`ÿï$‚ùÕÎ  ) çN!§Ìîø"botloli_harem_bot`ÿîž ‚ó›£} ! 4J^ËÄÆ?botnepgearbot`ÿæ?‚òªêe  Íä©ÁÆ…userxelyanaa`ÿåó!‚ã—¯_ ! dVê¬ž›Éuserotakuteger`ÿî] ‚ÄœÓO  À^€Rió†usermillivi03`ÿéA ‚Ã¨íb  Mp#MKðusertaijefx34`ÿæ@‚½¼Ø(  #7¼‘¦µäuserzedcrom`ÿîW‚«ùœ  GÆ·õ×Þusercurrui`ÿìò!‚«ƒ¹ ! Ê¾sÔ%Æuserthroughend`ÿéR$‚œ’Þc ) »c^hq`@'botdeezermusicbot`ÿê*#‚‡ô– % åœÏAW©6userananduthampi`ÿé%ñše ) EÁÏ¢¥ŸG…userneko_means_cat`ÿîÇ#ä°h % Á…´‹uZ‹useralvin_junior`ÿêt#Í…†j % v–ÄÚQ¸_Üuserso_save_me_m`ÿëE Á¥¸m ! ÎE™Vç¦qbotwhisperbot`ÿêo"ÍÌ„
+ % £Xt
+®0gbotgrouphelpbot`ÿï Éñ¤3 ! ‚¹õh“Õnbotaxenia_bot`ÿê'Âòð[ - ~_Ÿ%ch0userfromandtounknown`ÿë>!ÁžØ # ^'ŽÌ­# botchannel_bot`ÿî7ÿÿÿñ·’Ðí !  \·í­ÓÈ»òsupergroup`ÿë¡%ÿÿÿñ·’„Å\ # â¡ûô­	channelryuzokulogs`ÿìŽÿÿÿñ·Ž…Öz !  Î0Š%^Vèsupergroup`ÿæL*ÿÿÿñ·‡‘”8 !' ŽHÕ
+ÁÆÜsupergroupwibuudesunime`ÿï)ÿÿÿñ·†“Î} + ºiXé°channelanimehindimemes`ÿèZ-ÿÿÿñ·‚º‘S !- LÀÔ[9-supergroupotaku_chat_group`ÿîË*ÿÿÿñ·€íãñ !' ‹HåÎŽŽ=supergroupdawnguardchat`ÿîô,ÿÿÿñ·€ëàD !+ Ù½S! ûosupergroupanimechatsgroup`ÿî£3ÿÿÿñ¶þÑð© !9 ôì)7»^supergroupteenagerschattinggroup`ÿï$*ÿÿÿñ¶ûšÙd - ž
+I™ïòchannelanimeecchiwaifus`ÿè"ÿÿÿñ¶ö÷“a  ÛrA”¯“X	channelnekofied`ÿèr*ÿÿÿñ¶öª†ˆ !' Z¯§ý±~supergroupexorcistchats`ÿí6,ÿÿÿñ¶öŽæ !+ ´1îDzŠ¾supergroupwhythisusername`ÿê$ÿÿÿñ¶ôëÌ£ ! ,Êô%Ì^supergroupbottalk`ÿëÙ-ÿÿÿñ¶ô°»¦ 3 *®»7µchannelanime_bikini_waifus`ÿë¡$ÿÿÿñ¶ðÍš ! ï
+Å¤q„Õsupergroupjustcht`ÿî)ÿÿÿñ¶âÉÒ  !% Ð0WPà supergrouppyrogramchat`ÿî«(ÿÿÿñ¶Þ®Ì^ !# þg©¤IWÊðsupergroupotakuzdream`ÿï#%ÿÿÿñ¶ÙÌ†Q ! %,õË•Æ8Ýsupergroupanimeryu`ÿï'ÿÿÿñ¶ÔÁË !! Ù"‹þ†lsupergroupanteiku613`ÿåóÿÿÿñ¶ÏÓ°“ !  &Ý‚³wsupergroup`ÿï$0ÿÿÿñ¶Ë£¡ !3 3
+!"Ñ+Csupergrouppatheticprogrammers`ÿî#ÿÿÿñ¶¶•Ýf  {ÓÅ ÓÓchannelautoanime`ÿë$*ÿÿÿñ¶±£çw !' §‘Õ)ôsupergroupnekolitemight`ÿï
+   X» X/Ý·šsØPöÇ£~V*ÞŒ·e=õÏ*×¤°‰bE"ûÓ¦}X0
+©~Ê
+ã
+¿
+
+h
+B
+%
+ß¯‰Wð]@õÇŸxC&
+ü
+ß»
+¸
+’
+m
+G
+
+	Û	µ		be	9	æ¾¡B{À£pK.Ø¯‰g7 ï                               Œâ ) CbñˆÐ¹useroneforallkillu`ÿí_‡™Ý‹'   ¨b‘…újuser`ÿëÀ*‡–äå[ 5 *ÐÝÓ¤è\botthemaisakurajima_bot`ÿìT‡•ý¡,  ¦RŽàžáVuseros_r0`ÿím ‡•Çž  ä0)Ñ[/¸·usermodi42069`ÿé#‡‘ªíF % ½LuðÙû\useryandere_garl`ÿí‘$‡î¤/ ' _-ÛÒg7ýVuserperi_pathetic`ÿéU&‡Œ×ñ + ÆZñÈÐf‘userskittleislonely`ÿë‡‹Ïì6   Ms[2ç%nuser`ÿí´‡ŠÆ[  ›c}ây’Â¥userkamagoou`ÿçÖ-‡‰Áï9 9 ù‹Á¼ÉÂL¤userkiyotakaayanokojiclass`ÿí<‡‰¤ýU   Ã@Dg&)use…ÑµÖ   BŽõØÚ:user`ÿï#'„†ä¬8 / ’®ø ‘L botgroupanonymousbot`ÿï„ð‹½X  :Ù^K1†>useregxkzoej`ÿï'„ËÚå: / 7yI$¹öqbotfatewaifugram_bot`ÿîç!…§üÿ ! ä†¢kÇGuserakibhridoy`ÿî¥ „üñ±  ¨œlþÚè—¹uservans_chan`ÿî¡ „×ó÷3  |àÊoÞ‡…%userlina_desu`ÿî¡ „þ£°  ÑŠc`¢Xuserroninbruv`ÿî¡%…®½d ) ôw™càG×userimmortal_flare`ÿîò!„¨§¹ ! ìàwJ]·¦usermd_ashhaad`ÿî£†‘Ÿ£
+  S8ùn½
+userasitaw`ÿî£!…úŽÓ* ! lï¥-™[÷®userlovely2609`ÿî „´–×a   YOÈ¨«user`ÿî „üÑÕH  ðn‘	ÉÕþKusersourav_o3`ÿí¾ „È¸  Â²Ûq!Íyøusernot_argha`ÿì¼„È’°U  s½ùÐt=X‰userhellols`ÿìB„ÅÞßs  9Õã Óá?<useradiko0k`ÿï "„Å¾ˆf # »Â²¦Ž¨|userbout_myself`ÿéŸ$„»ÚÉw ' -rÆ?Däðuserrotten_potato`ÿêu"„º§¶4 # é9 p%çôuserdukhinaruto`ÿìö!„¸¤„ ! ùƒÕ†c‚=cusertanishk_01`ÿëÇ „°òë  j¿ƒd,usermortem000`ÿí „­î»  ƒ²Ì¬t†2useradisharks`ÿê'&„ óù- - óÊæÁ~Ä6cbotmentionmirrorbot`ÿî¡"„œ†ØO # Fõ½¦v{«¿userokashira_ai`ÿæp„–ÎÞ|  %¾PB ýtusericha2928`ÿìÎ„”í—}  ƒ½9.(Musererezado`ÿéf)„”žð 1 P+3[sm‹wuseruse_this_to_tag_me`ÿìQ"„£•# # I‡Ó¦¥luserammyforever`ÿêY,„Ï€ %›9¸Ç’]userryukaizen917773942467`ÿëg„‡²ÜP  ¯5`"L±ºusershal_x`ÿíÿ!„††È@ ! Žl{˜òuuserdeeks_04_8`ÿê„…ÿ—M   §èÿ»PU‘user`ÿë4 „…É K  KÆÐFÌˆuserneko_asta`ÿêo!ƒÿÓÿG ! ¹-uûØ;userkaambhari7`ÿëÊ%ƒúŽ 6 + Ñç0xBc×bottelemetr_io_bot`ÿéS#ƒùÎ˜y % <=/—cqusereagleeye2045`ÿì;ƒøÓ@  Aßê ‘‡-›userkody_k`ÿé, †”»¾T  pÚyÌ“žuserbillu_don`ÿê§†á·S   ¯wÌæI­Vuser`ÿåì"††¨" # `¼¤@[*userlilly_d1441`ÿîÜ†ˆÕ”H  `…‹Í2¶*botemcee_bot`ÿçé(†ˆ£–R / xä™W—ï”useranimekeparambhakt`ÿï"#†ƒÀñ# % ·œrñRJusermarysoatame2`ÿë‰%…ø¤Â ) ŸwäìÒF–]userannihilatorrrr`ÿé>"…ö˜±~ # ôà
+Ñ#^0üuseram_peerless`ÿí …ó°Î:  µ^ ×)’¿userepangjuls`ÿï …ñÕ+  ¡…ìW´ü¶µuserdiebishhh`ÿï$…ð©‘4   Qibu,	user`ÿè`#…ìæšd ' 2GD%r„ªbotjungkookrobot`ÿîú …èèÚ(  ÄœÂ+‚°usernao_ayaka`ÿî¥…æ¿  Ú5-@0"²îuserristarte`ÿì	 …Üôío  \†ˆ\0susersxnnyvibe`ÿèÐ!…ØÐˆE ! ËÌ÷(6
+|userronozoro99`ÿíì…Ï²âX   µ0{k+_+user`ÿëÏ$…Íþº ' ¢ÃôSÈ›userwhite_reaper1`ÿèz…É¸›   <5À¿9+Âuser`ÿìÌ/…Éœ»p = IþúÜZ«qRuserlove_me_or_hate_me_idgaf`ÿê¦!…Æñ€x ! Cæ¨XÝÍ|‰userccg_reaper`ÿåó"…ºÏ™R # oR;ªrà userdoctorryner`ÿéX(…¹—Ü 1 Ò²ÿeU¦botnarutouzumakirobot`ÿî…µ¥ëy  …î©øýž·Buserjanamir1`ÿê÷ …³†Ôd  ¯{c´Ò‰3usertigeran_5`ÿëÍ…±Ø©x   w™‘÷ª¡Vuser`ÿèe&…° ”F + Â\#~â³usernotyourpogchamp`ÿîx …¦¦Ì,  æÞ8÷¡ƒ(userneko_gurl`ÿîÅ*…£Ðö  5 MåWG¸ì4›botakenohimejimachatbot`ÿî…#…›Å§N % 2sŸ¹AK¥uservaishnavi912`ÿêo…›†   šhŸjÉ¸user`ÿí“…šá¿   $N»6yØƒuser`ÿîf …“”Ûy  >‚³ÃîQIûusersyafow109`ÿï "…““Ûw % VþC]f1×botany_animebot`ÿî)…Êª] 1 ˜â›SÏÒ+userczto_to_ili_kto_to`ÿæ¨……ÐÓs  ‡É•¶ m'useraxel_vr`ÿî!„þ÷È% ! ôMàš]­/usertamashiito`ÿæL „ôÆÉ*  ÷»€lR³¦
+userashu22111`ÿï"„ôÃûL # 
+	@É°íruseralifaiman06`ÿêŽ„ò•Ø  nT@‹^
+dFusermitarash`ÿíŒ#„òŒå] % Ü[ü·‰‹šuseritssamrat007`ÿîË'„íÿ— - ¥$Î Cónusertarikul_official`ÿî¸"„æƒáF % ˜9U±™1botnekofied_bot`ÿëÛ!„äÅž	 ! yã²¯zP!userbilakshanp`ÿï$„ÞûÜn  Õëè´¬­(userkyinel`ÿæ’„ÞëƒC   Xóï“S˜user`ÿì‘!„Ü´¶y ! ªò°`#®useryolaa_chan`ÿî¿!„Ûõú] ! çË?GìÀßDuseryouuumysun`ÿíÜ!„Ù‡æ ! ó€™a+½Susershoyo_kun5`ÿí`#„Ò÷ÿ$ % ÃF½§=rNóuserchadpotatoxd`ÿçñ
+   < ã¹`jG ƒÚ³–hAW
+ä
+²
+Š
+a
+D
+'ùÎ×±²g= ÷Ó¶hA
+÷
+Ê2
+¨
+‹
+b
+E
+(	õ	Ð	³	‡	]	4	ì¼ŸtC                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               .†¡ë…2 ; õõ—–îÄ¼+userthebishwhotaggedmeisgay`ÿï ‡±Ð=   žÎy‘ä'›user`ÿï†¢Ã¾,  yj Uåïuserdogeaf`ÿî¸)†¹Žêk 1 ä-Ç=î®µusernasigorengkambheng`ÿî¡†ëÊ´a  ¤I™°s€õ¦usernez_chan`ÿî¡%†äƒÁt ) ˆñ@cêÌøusergojo_shipudenn`ÿï*†¦ ès 3 "qDv’µtäuserking_of_chromosomes`ÿï†ÿÍ•  x/n„Wúuserummay500`ÿîå†ÃîÓ}   Õ· áôÖÓuser`ÿï$%‡šÜâ ) CbñˆÐ¹useroneforallkillu`ÿî‡™Ý‹'   ¨b‘…újuser`ÿëÀ*‡–äå[ 5 *ÐÝÓ¤è\botthemaisakurajima_bot`ÿìT‡•ý¡,  ¦RŽàžáVuseros_r0`ÿï  ‡•Çž  ä0)Ñ[/¸·usermodi42069`ÿé#‡‘ªíF % ½LuðÙû\useryandere_garl`ÿî,$‡î¤/ ' _-ÛÒg7ýVuserperi_pathetic`ÿéU&‡Œ×ñ + ÆZñÈÐf‘userskittleislonely`ÿë‡‹Ïì6   Ms[2ç%nuser`ÿîâ‡ŠÆ[  ›c}ây’Â¥userkamagoou`ÿçÖ-‡‰Áï9 9 ù‹Á¼ÉÂL¤userkiyotakaayanokojiclass`ÿí<‡‰¤ýU   Ã@Dg&)user`ÿèg‡‡ú‚_   £¥Ú'÷n¯user`ÿæ…#‡„Ü³ % zC5Ü’Å•userlynx_katsuyo`ÿëç‡€÷Þb   
+u~ãSPÃuser`ÿï‡€ƒn  t›1HÕŒwuserijcze`ÿêŽ'†ûÚŽ8 - KºQÛ?userusorpericulosule`ÿë”†ùì÷  †Õ3Ãºgbuserzenoxd`ÿí6!†ø«’F ! QúmçÇ+userot7_girl07`ÿï$!†÷Þ•6 ! k¨Ÿ´a²“‡usersmokeroese`ÿí´!†÷’’ ! JÇ²¾êðÃuserviktorbrun`ÿìE!†ö¥þ1 ! ÚÛ{ž
+	)useraura_moon1`ÿí5†öƒÍV   pÈ p)‡zuser`ÿæ_†óéëk  )$(AlÕhuserhashlra`ÿçí#†ï¦–O ' {1¡²©VUbothanabi_anibot`ÿæL†îúÊy   ¢Öz¹ävuser`ÿêt$†îºÆs ' ~0i6LÙ+userkarmen_sensei`ÿîË"†ìÃŒd # J(_7à³äusershitmylife1`ÿï†èöìE  Š3Jnguserritvz`ÿæ>†äØÑ   3íäaeR-user`ÿçØ%†ãÊ”S ) Ö^nþ†àusersatan_fireball`ÿåí(†á°ÅF 1 |
+ýúsexbotkushinauzumaki_bot`ÿåÖ†×Ì‚   f‡C:¶Æêuser`ÿåÖ†ÕúãA   í/H¼ãõ`user`ÿî?#†Õ¨©U % ¨Hœ9Í@¢userwhyam_i_here`ÿîµ"†ÐÄëi # ØÈ™ˆþêusersoltenebris`ÿëÍ,†Ï§ñF %(êóÌ:|*Puserlifesukcs919928862742`ÿï$†ÎÀ’q ' ‚pXÙ=+ªuserlovely_senpai`ÿìc-†ÊÀºd 9 ÏÖ…\™Ýuserlove_the_way_u_hate_me`ÿîú!†Àð”F ! ¢Upwî6ôÈuserkawai_keki`ÿí6(†¿ÛŸU 1 5Z¥Ibotfoundingtitanrobot`ÿîº†¿Œs   S–K’ØWguser`ÿíÖ!†½î›* ! å¦æVúãþuserduke123abc`ÿëÙ †»ûÑ0  4nýf›useravijneyam`ÿé†¶Æ©H   ­á_•â¿©]user`ÿï$†°Ã‹/ ) l¬‚=}¨botsaberx_herobot`ÿçá†®‰ª   =NÚõ3²ïKuserkimis9`ÿëû †­×Þw  eŠœÛÝ½^userkenzonew1`ÿîÖ#†¨‚õ! % ` ÕLÇ)userizumicypherx`ÿèÃ$† €Í_ ' |‘Êá\Î©userdhruvkrpathak`ÿí6†šÇš]   ðk”øœÏ\+user`ÿï
+ |àtìâÚsÒúŽ—eÂºª²ªâÙ’ò]‚zrj–ZRêJô:Â)	Æúæ{Ó¿¢(~žoV²Ñ
+Ê
+·
+¦	_
+…
+s°
+b
+Q
+>;b
+&s
+
+ïÜ>Î´÷‹r\@48¸Ñ&-äáÊ³ˆ¡‹	çËüC4%
+þ
+ñá
+×½
+¯
+Ÿí
+y
+g
+Wã
+0Ÿ
+EUýìÚÉm¸ž|fT@)õÞË·#¡”‚hVA$¦ùëéÜÊµ¤ycUB0Kò:áÐ–¿­›ƒcL=!•þðÖ¾ª˜†q]D-üêØÉ»        à pyrogrambotÖóQà anime_meemesÿæÐ: gramson880]œ cQÍ] qsö6 h{©ý F…«á
+combot’Âm d#deshdeepak2=ÿ7[%anime_meemesÿæÐ:7churchofrukasarashinaÿÔ·J j¾±Á SgC mor	 ÿÓé°“'anime_villageÿã©\ SX_kenzonew1eµïw!bilakshanpL‘O	adiko0kH·¯ó1doragonsureiya_bot&²¨'jungkookrobot]™dashu22111N‘¤ª Y.
+”å 
+asitawb'ÑŠ#dukhinarutoGIÛ4'dhruvkrpathakd &ß9kiyotakaayanokojiclassq0w¹ >Û'g#am_peerless^Æþ KÚÁÃ pïb+animechatsgroupÿà5àD
+dogeafdPß,!akibhridoyTÿ?› fÑ”È)immortal_flareUÏHd'dawnguardchatÿà6ãñepangjuls^l':'getmarriedbot0Ù€xdiebishhh^#j«3king_of_chromosomesdÈ4s»caliph786.,i:-callmesenpaibish/þl1)gojo_shipudennl€àô1foundingtitanrobotgöÏÕå%itssamrat007NC2Ý%any_animebotRdí÷"Åimmortal_flareUÏHdýgetmarriedbot0Ù€xèdawnguardchatÿà6ãñÑking_of_chromosomesdÈ4s¶getmarriedbot0Ù€xdiebishhh^#j«dawnguardchatÿà6ãñ° king_of_chromosomesdÈ4s)immortal_flareUÏHdHgetmarriedbot0Ù€x3immortal_flareUÏHddiebishhh^#j«immortal_flareUÏHd'getmarriedbot0Ù€x'dawnguardchatÿà6ãñ Êking_of_chromosomesdÈ4s ¯getmarriedbot0Ù€x)immortal_flareUÏHd· 2dawnguardchatÿà6ãñ· king_of_chromosomesdÈ4sdiebishhh^#j« Aimmortal_flareUÏHd'getmarriedbot0Ù€x immortal_flareUÏHd+animechatsgroupÿà5àDhOdawnguardchatÿà6ãñh8king_of_chromosomesdÈ4shgetmarriedbot0Ù€xhdawnguardchatÿà6ãñ£ king_of_chromosomesdÈ4s+animechatsgroupÿà5àDÎ get Z-k/animekeparambhaktaËR/groupanonymousbot@Ù8egxkzoejNÞØ s¬h=%grouphelpbot	³
+animeryuÿÖfQK animekeparambhaktaËRbruck_08Y Õ¡ =animekeparambhaktaËR s¬h=¡ grouphelpbot	³
+¡ s¬h=/fatewaifugram_botIv²ºø BanimekeparambhaktaËRbruck_08Y Õø animekeparambhaktaËR'karmen_senseimÎ£s	- animekeparambhaktaËR5akenohimejimachatbotTt; 	n 2dawnguardchatÿà6ãñ3king_of_chromosomesdÈ4saxel_vrP´)ó	ø ygetmarriedbot0Ù€x+animechatsgroupÿà5àD pïbdiebishhh^#j«/animekeparambhaktaËR	ø animechatsgroupÿà5àDgramson880]œ
+ animechatsgroupÿà5àD
+kimis9eÂU 
+B kenzonew1eµïw!kawai_kekih
+F
+Š karmen_senseimÎ£skamagoouqGc[!kaambhari7?ôÿÇjustchtÿÜ&š
+Ã jungkookrobot]™djanamir1V©uù%izumicypherxe º¡X itssamrat007NC2Ý1infinity_forever_0<ybijczepÁîicha2928BÓ¯|+iam_ironman30008aG£hellolsI˜Uhashlranzuë'hanabi_anibotmé‹O™ )grouphelpbot	³
+™ getmarriedbot0Ù€x-fromandtounknown\¸[ð foundingtitanrobotgöÏÕ'exorcistchatsÿÝ•ˆ+everythingsuckz6ÊðerezadoB›KýK epangjuls^l':emcee_botaJH%eagleeye2045?3Œy!duke123abcg»ª#doctorrynerWSÌÒ diebishhh^#j«)deezermusicbot#„¯c/deep_imaginations=E˜1!deeks_04_8@Á¤@
+— dawnguardchatÿà6ãñ1czto_to_ili_kto_toR•]
+currui%~N#channel_bot'¬%chadpotatoxdJ]ÿ¤!ccg_reaperXÜ@xcatseye_3>ž£-call_me_senpai69=~zŸ#bout_myselfH¯„fbottalkÿÝ5Ì£billu_donbŽßT!barryspace=¹¥g!axenia_bot	<R3
+Ü axel_vrP´)óavijneyamg~è°autoanimeÿÍŠÝf!aura_moon1nÉ1+ %ashu22111N‘¤ª%any_animebotRdí÷!anteiku613ÿÕ Ë)annihilatorrrr_	!‰ +animeryuÿÖfQ‰ animekeparambhaktaËR+animehindimemesÿá‰Î}-animeecchiwaifusÿÞÍYd
+ animechatsgroupÿà5àD3anime_bikini_waifusÿÝ;¦%ananduthampi ý#ammyforeverBÊ£%alvin_juniorŒè#alifaiman06NýÌb akenohimejimachatbotTt; adisharksE»‚a_hentai82, s7E§ q)>Õ pþ_Š pïb nÀæÖ mÞ¥y l–(Ÿ jóš j¾±Á gàFsÊ fÑ”ÈÊ cQÍ] b[Ó ^
+H´ Yì±X V6øö SX_ @¿ËÍ 3€qú	 ÿä¨m	 ÿã‚Öz   
+ÿÓé°“
+   hþ æØÇ´f£yY;) ì×ª¿®žŒ{j¼Y?+.
+õ
+á
+Ê
+¸V
+§
+–
+
+l
+X
+A
++
+
+òàË®™†pXH;w)îØÂ´¡xfR?.
+û
+ê
+Ø
+Æ
+®
+Ž
+w
+hþ
+L
+4
+"
+
+š	é	Ñˆ	½E	«	™	„	p	W	@	0	#	ýëÜÎ                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ;thebishwhotaggedmeisgayd:Â²
+nnbbotBðî1nasigorengkambhengg#µkvans_chanOœX…nez_chanmršalina_desuJüû³roninbruvOÈØ!utahjohnny(¨2ummay500oóJ—!md_ashhaadE	Üƒ!moviejoker>;“µ
+zenoxdo;;‹zedcrom'¯,(!youuumysunK}}]!yolaa_chanKy%yandere_garlr*¶Æxgorn9&ç"xelyanaa.Jµe'wibuudesunimeÿáÈ”8+whythisusernameÿÝ‡æ%whyam_i_herejªÕ'white_reaper1Y¿!whisperbot)\m!viktorbrunnä‰%vaishnavi912SqSÎ-usorpericulosuleov‡81use_this_to_tag_meB‡¸
+tno_xd7ñKåtigeran_5Vaªd!throughend%`Ü-theprogrammercat"ä¸¹5themaisakurajima_botrÙ2Ûthaya032 úP+telemetr_io_bot?C69teenagerschattinggroupÿß¨ð©-tarikul_officialM¿Ë!tanishk_01G	!tamashiitoOÝä%taijefx34(j6ât4rt4glia>Usyafow109Re-ùsxnnyvibe[6ïsourav_o3O”jÈ#soltenebrisj5é%so_save_me_m¡Cj!smokeroesen÷Š¶+skittleislonelyq•ø›!shoyo_kun5K!ó#shitmylife1mÆd
+shal_x@ì®P)satan_fireballlrŠS)saberx_herobotfÅ¯#ryuzokulogsÿä‚E\ryukaizenAóÀ'rotten_potatoGv¤÷!ronozoro99[Eritvzm¶Eristarte\À_‡)pythonofftopicÿè †´%pyrogramchatÿØ¤Ò #pyrogrambotÖóQ'peri_patheticqû’/3patheticprogrammersÿÒÑ¡#otakuzdreamÿ×—L^!otakuteger,e×ß-otaku_chat_groupÿàS!ot7_girl07o
+ÉFos_r0r¿P¬)oneforallkillusW1+on9wordchainbot2‹%okkotsuyuta1<v‹#okashira_aiC¬O+notyourpogchampV
+Fnotthatmf9ïÿnot_arghaI\!nepgearbot.fÑý'nekolitemightÿÌQçw%nekofied_botLÀðÆnekofiedÿÝ»“a)neko_means_cat&‡åneko_gurlTÉ¦,neko_asta@²PK1narutouzumakirobotW%înao_ayaka]-(mortem000Fµ‘modi42069r±Ï!miyukiibot8ø¢ÁmitarashNElmillivi03(‡)Ï-mentionmirrorbotDü­'maxamuudcumar=Õð/%marysoatame2`p8£%lynx_katsuyop—'lovely_senpaiiÐ	q!lovely2609_C©ª9love_the_way_u_hate_meiPd=love_me_or_hate_me_idgafY'ð%lolimnotabot6¸EÅ)loli_harem_bot/5g llphamale=†qå#lilly_d1441b”"lifesukcsiéøÆ
+kyinelKÞîn1kushinauzumaki_botl,"Æ
