@@ -43,8 +43,7 @@ async def delete_nepgear_startmessage(client, message):
 
 @app.on_message(filters.chat(chat_id) & filters.user(1416903424) & filters.regex(pattern='^Ara.*s$'))
 async def delete_akeno_startmessage(client, message):
-    if 'Ping' in message.reply_markup.InlineKeyboardButton.text:
-        message.delete()
+    message.delete()
  
 
 @app.on_message(filters.chat(chat_id) & filters.user(1031952739) & filters.regex(pattern='^Hello.*me$'))
