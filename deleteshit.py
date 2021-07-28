@@ -27,7 +27,7 @@ async def delete_animebot_shit(client, message):
         await message.delete()
         await guessmessage.delete()
         
-@app.on_message(filters.chat(chat_id) & filters.user(1382346231) & (filters.regex(pattern='Thank you for using animebot.') | filters.regex(pattern='Join our updates')))):
+@app.on_message(filters.chat(chat_id) & filters.user(1382346231) & (filters.regex(pattern='Thank you for using animebot.') | filters.regex(pattern='Join our updates'))):
 async def delete_animebot_startmessage(client, message):
     message.delete()
 
