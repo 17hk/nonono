@@ -4,7 +4,6 @@ from pyrogram import Client, filters
 app = Client("my_session", api_id=os.environ['api_id'], api_hash=os.environ['api_hash'])
 
 guessmessage = None
-waifumessage = None
 
 @app.on_message(filters.chat('animeryu') & filters.user(1382346231))
 async def delete_animebot_shit(client, message):
@@ -23,7 +22,6 @@ async def delete_animebot_shit(client, message):
         await message.reply_to_message.delete()
         await message.delete()
         await guessmessage.delete()
-
 
     
 app.run()
