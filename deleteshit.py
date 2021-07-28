@@ -3,7 +3,7 @@ from pyrogram import Client, filters
 
 app = Client("my_session", api_id=os.environ['api_id'], api_hash=os.environ['api_hash'])
 
-chat_id = 1425336751
+chat_id = ['1425336751']
 
 
 
