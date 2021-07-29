@@ -27,6 +27,9 @@ async def delete_animebot_shit(client, message):
 async def delete_random_shit(client, message):
     if message.text.lower() == '/guess' or message.text.lower() == '/guess@any_animebot':
         await message.delete()
+    
+    elif message.text[:3].lower() == '/uwu':
+        await message.delete()
 
     
 app.run()
