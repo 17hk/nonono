@@ -22,6 +22,11 @@ async def delete_animebot_shit(client, message):
         await message.reply_to_message.delete()
         await message.delete()
         await guessmessage.delete()
+        
+@app.on_message(filters.chat('animeryu'))
+async def delete_random_shit(client, message):
+    if message.text.lower() == '/guess' or message.text.lower() == '/guess@any_animebot':
+        message.delete()
 
     
 app.run()
