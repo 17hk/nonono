@@ -29,7 +29,7 @@ async def delete_random_shit(client, message):
     elif message.text[:4].lower() == '/uwu':
         await message.delete()
     
-    elif 'nigga' in message.text.lower() or 'nigger'.lower() in message.text.lower() or 'nibba' in message.text.lower():
+    elif 'nigga' in message.text.lower() or 'nigger'.lower() in message.text.lower() or 'nibba' in message.text.lower() or 'nigha' in message.text.lower():
         await message.delete()
 
     
