@@ -1,5 +1,6 @@
-import os
+import os, wget
 from pyrogram import Client, filters
+
 
 app = Client("my_session", api_id=os.environ['api_id'], api_hash=os.environ['api_hash'])
 
@@ -31,6 +32,14 @@ async def delete_random_shit(client, message):
     
     elif 'nigga' in message.text.lower() or 'nigger'.lower() in message.text.lower() or 'nibba' in message.text.lower() or 'nigha' in message.text.lower():
         await message.delete()
+        
+@app.on_message(filters.command('download', prefix='?') & filters.chat('animeryu'))
+async def download_url(client, message):
+    file_name = wget.download(message.command[1])
+    if file_name.split('.')[-1] == mp4 or file_name.split('.')[-1] == mkv:
+        message.reply_video(video=file_name, supports_streaming=True)
+    else:
+        message.reply_document(file_name)
 
     
 app.run()
