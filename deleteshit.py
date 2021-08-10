@@ -1,4 +1,4 @@
-import os, wget
+import os, requests
 from pyrogram import Client, filters
 
 
@@ -35,7 +35,19 @@ async def delete_random_shit(client, message):
         
 @app.on_message(filters.command('download', prefixes='?') & filters.chat('animeryu'))
 async def download_url(client, message):
-    file_name = wget.download(message.command[1])
+    def download_file(url):
+    local_filename = url.split('/')[-1]
+    # NOTE the stream=True parameter below
+    with requests.get(url, stream=True) as r:
+        r.raise_for_status()
+        with open(local_filename, 'wb') as f:
+            for chunk in r.iter_content(chunk_size=8192): 
+                # If you have chunk encoded response uncomment if
+                # and set chunk_size parameter to None.
+                #if chunk: 
+                f.write(chunk)
+    return local_filename
+    file_name = download_file(message.command[1])
     if file_name.split('.')[-1] == mp4 or file_name.split('.')[-1] == mkv:
         message.reply_video(video=file_name, supports_streaming=True)
     else:
