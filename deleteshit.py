@@ -2,7 +2,7 @@ import os, requests
 from pyrogram import Client, filters
 
 
-app = Client(os.environ['session_string'])
+app = Client(os.environ['session_string'], api_id=os.environ['api_id'], api_hash=os.environ['api_hash'])
 
 guessmessage = None
 
