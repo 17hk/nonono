@@ -1,1 +1,1 @@
-worker: python deleteshit.py
+worker: python main.py
