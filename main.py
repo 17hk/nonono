@@ -136,6 +136,7 @@ userspam_triggers = [
 @app.on_message(filters.chat(-1001425336751))
 async def deleteshit(client: Client, message: Message):
     if message.from_user.is_bot:
+        global botspam_triggers
         for trigger in botspam_triggers:
             if trigger in message.text: await message.delete(); await message.reply_to_message.delete()
             elif trigger in message.caption: await message.delete(); await message.reply_to_message.delete()
@@ -147,6 +148,7 @@ async def deleteshit(client: Client, message: Message):
             await message.delete()
             await guessmessage.delete()
     else:
+        global userspam_triggers
         for trigger in userspam_triggers:
             if trigger.lower() in message.text: await message.delete()
 
