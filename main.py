@@ -3,10 +3,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
-app = Client(
-    os.environ['session_string'],
-    api_id=os.environ['api_id'],
-    api_hash=os.environ['api_hash']
+app = Client(os.environ['session_string'], api_id=os.environ['api_id'], api_hash=os.environ['api_hash']
 )
 
 
