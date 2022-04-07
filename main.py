@@ -17,12 +17,15 @@ async def job():
     #Append values in the newly created lists
     for submission in response['data']['children']:
         #First checking if the post is already posted in telegram channel. If posted, continue to the next iteration.
-        message_history = await app.get_history('AnimeNewsMedia', limit=20)
-        for message in message_history:
-            if message.media:
-                if submission['data']['url'] in message.caption_entities: continue
-            else:
-                if submission['data']['url'] in message.entities: continue
+        try:
+            message_history = await app.get_history('AnimeNewsMedia', limit=20)
+            for message in message_history:
+                if message.media:
+                    if submission['data']['url'] in message.caption_entities: continue
+                else:
+                    if submission['data']['url'] in message.entities: continue
+        except:
+            pass
 
         #Ignore submisioons if they're not older than 3 minutes
         if int(time.time()) - submission['data']['created_utc'] < 180: continue 
