@@ -6,7 +6,6 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 app = Client(os.environ['session_string'], api_id=os.environ['api_id'], api_hash=os.environ['api_hash']
 )
 
-'''
 #For channel
 async def job():
     #For the submissions with with news flair
@@ -111,8 +110,8 @@ async def job():
                 disable_notification=True
             )
         os.remove(os.path.abspath(filename))
-'''
 
+'''
 #For deleting botspam in group
 guessmessage = None
 botspam_triggers = [
@@ -151,15 +150,14 @@ async def deleteshit(client: Client, message: Message):
         global userspam_triggers
         for trigger in userspam_triggers:
             if trigger.lower() in message.text: await message.delete()
-
-
-
 '''
+
+
 scheduler = AsyncIOScheduler()
 scheduler.add_job(job, "interval", seconds=300)
 
 scheduler.start()
-'''
+
 app.run()
 
 
