@@ -1,5 +1,5 @@
 python-dotenv
-pyrogram
+pyrogram==1.4.0
 tgcrypto
 requests
 apscheduler
